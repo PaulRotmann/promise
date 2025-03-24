@@ -28,5 +28,8 @@
         <ini name="assert.active" value="1" />
         <ini name="assert.exception" value="1" />
         <ini name="assert.bail" value="0" />
+        <env name="XDEBUG_MODE" value="off"/>
+        <ini name="pcov.enabled" value="1"/>
+        <ini name="xdebug.mode" value="off"/>
     </php>
 </phpunit>

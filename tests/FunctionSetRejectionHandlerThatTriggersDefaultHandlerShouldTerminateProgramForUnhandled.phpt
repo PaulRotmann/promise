@@ -21,4 +21,4 @@ echo 'NEVER';
 
 ?>
 --EXPECTF--
-Fatal error: Unexpected RuntimeException: foo in %s line %d
+%AFatal error: Unexpected RuntimeException: foo in %s%s
