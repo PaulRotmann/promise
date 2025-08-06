@@ -56,9 +56,14 @@ final class FulfilledPromise implements PromiseInterface
         return $this;
     }
 
+    /**
+     * @param callable(): (void|PromiseInterface<void>) $onFulfilledOrRejected
+     * @return PromiseInterface<T>
+     */
     public function finally(callable $onFulfilledOrRejected): PromiseInterface
     {
         return $this->then(function ($value) use ($onFulfilledOrRejected): PromiseInterface {
+        	/** @var T $value */
             return resolve($onFulfilledOrRejected())->then(function () use ($value) {
                 return $value;
             });
